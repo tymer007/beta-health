@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-black text-white p-8">
       <div className="max-w-7xl mx-auto flex justify-between">
         <div>
-          <img src="vite.svg" alt="Logo" className="h-12 w-auto mb-4" />
+          <img src="logo.png" alt="Logo" className="h-20 w-auto mb-4" />
           <p className="mb-4">Your Health, Our Passion: Trusted Guidance from Medical Experts</p>
           <div className="flex space-x-4">
             <div className="bg-white h-8 w-8 rounded-full"></div>

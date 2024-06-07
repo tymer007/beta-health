@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="bg-black text-white p-4 flex justify-between items-center">
       <div className="flex items-center space-x-8">
-        <img src="/vite.svg" alt="Logo" className="h-8 w-auto" />
+        <img src="logo.png" alt="Logo" className="h-20 w-auto" />
         <nav className="flex space-x-8">
           <a href="#" className="hover:text-gray-400">Home</a>
           <a href="#" className="hover:text-gray-400">Contact us</a>
