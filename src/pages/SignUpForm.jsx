@@ -126,6 +126,7 @@ const SignUpForm = () => {
         <img src="index.jpeg" alt="Form" className="w-full h-full object-cover" />
       </div>
     </div >
+    
   );
 };
 
