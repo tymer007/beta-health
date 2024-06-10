@@ -7,7 +7,7 @@ export default function Dashboard ({ children }) {
     const [expanded, setExpanded] = useState(true)
     return (
         <>
-            <aside className="h-screen">
+            <aside className="min-h-screen">
                 <nav className="h-full flex flex-col bg-customDark border-r shadow-sm">
                     <div className="p-4 pb-2 flex justify-between items-center">
                         <img src="logo.png" className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
@@ -22,11 +22,11 @@ export default function Dashboard ({ children }) {
                     </SidebarContext.Provider>
 
                     <div className="border-t border-gray-600 flex p-3">
-                        <img src="logo.png"  className="w-10 h-10 rounded-md" />
+                        <img src="user-286.png" className="w-10 h-10 rounded-md" />
                         <div className={`flex justify-between items-center overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"} `}>
                             <div className="leading-4">
                                 <h4 className="font-semibold text-gray-200">Expert</h4>
-                                <span className="text-xs text-gray-400">constgenius@gmail.com</span>
+                                <span className="text-xs text-gray-400">expert@gmail.com</span>
                             </div>
                             <MoreVertical size={20} color="#ffffff" />
                         </div>

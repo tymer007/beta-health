@@ -52,15 +52,15 @@ const WriterProfile = () => {
               <h3 className="text-lg text-center font-semibold mb-4 text-[#D73D00]">Articles Written</h3>
               <div className="space-y-4">
                 {[1, 2, 3].map((article, index) => (
-                  <div key={index} className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
+                  <div key={index} className="flex flex-col cursor-pointer md:flex-row space-y-4 md:space-y-0 md:space-x-4 bg-gray-50 p-4 rounded-lg shadow-md">
                     <img
                       className="w-full md:w-1/4 h-24 object-cover rounded-lg"
                       src="index.jpeg"
                       alt="Article"
                     />
                     <div className="w-full md:w-3/4">
-                      <h4 className="text-md font-semibold">How to Avoid Breast Cancer</h4>
-                      <p className="text-gray-500 text-sm mb-2">By Kylian Mbappe &middot; Posted on 28th May, 2024</p>
+                      <h4 className="text-md font-semibold hover:text-customOrange">How to Avoid Breast Cancer </h4>
+                      <p className="text-gray-500 text-sm mb-2">By Kylian Mbappe &middot; Posted on 28th May, 2024 </p>
                       <p className="text-gray-700 mb-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. bsd dsdjh sdhj sd, amet consectetur adipisicing elit. bsd dsdjh sdhj sd,  animi de...
                       </p>
