@@ -16,6 +16,9 @@ import LogInPage from './pages/LogInPage.jsx';
 import DashboardWriterProfile from './dashboard/DashboardWriterProfile.jsx';
 import DashboardWriterConsultations from './dashboard/DashboardConsultations.jsx';
 import DashboardWriteArticle from './dashboard/DashboardWriteArticle.jsx';
+import CardCarousel from './components/CardCarousel.jsx';
+import Form from './pages/Form.jsx';
+import TopArticles from './components/TopArticles.jsx';
 
 function App() {
 
@@ -23,19 +26,26 @@ function App() {
 
   return (
     <>
+
+      {/* <div><LogInPage /></div>
+      <div><DashboardWriterConsultations /></div>
+      <div><DashboardWriteArticle /></div>
+      <div><Form /></div> */}
+
+
+
+      <div><DashboardWriterProfile /></div>
+
       {/* 
-      <div><Header /></div>
-      <div><SignUpForm /></div>
       <div><WriterProfile /></div>
-      <div><LogInPage /></div>
+      <div><Header /></div>
+      <div><CardCarousel /></div>
+      <div><Footer /></div>
+      <div><TopArticles /></div>
       <div><ApplicationFirstPage /></div>
       <div><ApplicationSecondPage /></div>
-      <div><Footer /></div>
-      <div><DashboardWriterProfile /></div>
-      <div><DashboardWriterConsultations /></div>
-    */}
-    
-    <div><DashboardWriteArticle /></div>
+      <div><SignUpForm /></div> */}
+
 
     </>
   )

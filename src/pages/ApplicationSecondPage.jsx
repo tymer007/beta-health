@@ -388,10 +388,11 @@ const ApplicationSecondPage = () => {
                 />
               </div>
             </div>
-
-            <button type="submit" className="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700 w-full">
-              Continue
-            </button>
+            <div className='flex justify-center'>
+              <button type="submit" className="bg-orange-600 text-white px-6 py-3 rounded-full hover:bg-orange-700 w-1/5">
+                Continue
+              </button>
+            </div>
             <p className="text-center mt-4 pb-3">
               <a href="#" className="text-blue-500 hover:underline">Already have an expert account?</a>
             </p>

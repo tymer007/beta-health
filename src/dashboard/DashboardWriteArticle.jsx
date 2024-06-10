@@ -1,22 +1,10 @@
+// DashboardWriterProfile.js
 import React from 'react';
 import Dashboard, { DashboardItem } from './Dashboard';
 import { User, Home, SquarePen, LogOut, Calendar, LifeBuoy, Settings } from "lucide-react";
+import Loader from '../components/Loader';
 
 const DashboardWriterProfile = () => {
-  const loaderStyle = {
-    width: '70px',
-    height: '15px',
-    borderRadius: '15px',
-    background: 'linear-gradient(orange 0 0) 0/0% no-repeat lightblue',
-    animation: 'l2 3s infinite steps(10)'
-  };
-
-  const keyframesStyle = `
-    @keyframes l2 {
-      100% { background-size: 110%; }
-    }
-  `;
-
   return (
     <>
       {/* Dashboard */}
@@ -34,12 +22,9 @@ const DashboardWriterProfile = () => {
         <div className="flex-1 p-8">
           <h1 className="text-2xl font-bold">Write an Article!</h1>
           <p>This is your dashboard content.</p>
-          
-          <div
-          //  className='hidden'
-          >
-            <style>{keyframesStyle}</style>
-            <div style={loaderStyle}></div>
+
+          <div>
+            <Loader />
           </div>
         </div>
       </div>

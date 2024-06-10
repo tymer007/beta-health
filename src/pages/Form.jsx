@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ApplicationFirstPage = () => {
+const Form = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -11,47 +11,41 @@ const ApplicationFirstPage = () => {
     gender: '',
     contactNumber: '',
     email: '',
+    postalCode: '',
     country: '',
     state: '',
-    postalCode: '',
     jobType: [],
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Form submission logic here
   };
 
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setFormData((prevState) => {
-      const newJobTypes = checked
-        ? [...prevState.jobType, name]
-        : prevState.jobType.filter((job) => job !== name);
-      return {
-        ...prevState,
-        jobType: newJobTypes,
-      };
-    });
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted', formData);
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setFormData((prevFormData) => {
+      if (checked) {
+        return { ...prevFormData, jobType: [...prevFormData.jobType, name] };
+      } else {
+        return { ...prevFormData, jobType: prevFormData.jobType.filter((job) => job !== name) };
+      }
+    });
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 overflow-hidden">
-      <div className="w-full max-w-xl bg-white p-6 rounded-lg shadow-lg">
-        <img src="logo.png" alt="Logo" className="h-16 w-auto mb-6 mx-auto" />
+    <div className="min-h-screen h-screen flex items-center justify-center bg-gray-100 overflow-hidden">
+      <div className="w-full max-w-2xl bg-white p-8 my-10 rounded-lg shadow-lg">
+        <img src="logo.png" alt="Logo" className="h-20 w-auto mb-8 mx-auto" />
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="text-center mb-4">
-            {/* <Link to="/" className="text-blue-500 hover:underline">Back Home</Link> */}
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="mb-4 text-center">
+            <a href="/" className="text-blue-500 hover:underline">Back Home</a>
             <h2 className="text-2xl font-semibold mt-2">Personal Information:</h2>
           </div>
 
@@ -147,9 +141,6 @@ const ApplicationFirstPage = () => {
                 required
               >
                 <option value="">Select gender</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
               </select>
             </div>
             <div className="flex flex-col">
@@ -222,50 +213,13 @@ const ApplicationFirstPage = () => {
                 required
               >
                 <option value="">Select</option>
-                <option value="Abia">Abia</option>
-                <option value="Adamawa">Adamawa</option>
-                <option value="Akwa Ibom">Akwa Ibom</option>
-                <option value="Anambra">Anambra</option>
-                <option value="Bauchi">Bauchi</option>
-                <option value="Bayelsa">Bayelsa</option>
-                <option value="Benue">Benue</option>
-                <option value="Borno">Borno</option>
-                <option value="Cross River">Cross River</option>
-                <option value="Delta">Delta</option>
-                <option value="Ebonyi">Ebonyi</option>
-                <option value="Edo">Edo</option>
-                <option value="Ekiti">Ekiti</option>
-                <option value="Enugu">Enugu</option>
-                <option value="FCT">FCT</option>
-                <option value="Gombe">Gombe</option>
-                <option value="Imo">Imo</option>
-                <option value="Jigawa">Jigawa</option>
-                <option value="Kaduna">Kaduna</option>
-                <option value="Kano">Kano</option>
-                <option value="Katsina">Katsina</option>
-                <option value="Kebbi">Kebbi</option>
-                <option value="Kogi">Kogi</option>
-                <option value="Kwara">Kwara</option>
-                <option value="Lagos">Lagos</option>
-                <option value="Nasarawa">Nasarawa</option>
-                <option value="Niger">Niger</option>
-                <option value="Ogun">Ogun</option>
-                <option value="Ondo">Ondo</option>
-                <option value="Osun">Osun</option>
-                <option value="Oyo">Oyo</option>
-                <option value="Plateau">Plateau</option>
-                <option value="Rivers">Rivers</option>
-                <option value="Sokoto">Sokoto</option>
-                <option value="Taraba">Taraba</option>
-                <option value="Yobe">Yobe</option>
-                <option value="Zamfara">Zamfara</option>
               </select>
             </div>
           </div>
 
-          <div className="flex flex-col items-center mb-4">
-            <label className="mb-1 text-center">What job(s) are you open to working on? (You can check more than one):</label>
-            <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col mb-4 items-center">
+            <label className="mb-1">What job(s) are you open to working on, you can check more than one:</label>
+            <div className="flex flex-wrap gap-4">
               <label className="flex items-center">
                 <input
                   type="checkbox"
@@ -288,13 +242,10 @@ const ApplicationFirstPage = () => {
               </label>
             </div>
           </div>
-          <div className='flex justify-center'>
-            <button type="submit" className="bg-orange-600 text-white py-2 rounded-full hover:bg-orange-700 w-1/5">
-              Continue
-            </button>
 
-          </div>
-
+          <button type="submit" className="bg-orange-600 text-white px-6 py-3 rounded hover:bg-orange-700 w-full">
+            Continue
+          </button>
           <p className="text-center mt-4">
             <a href="#" className="text-blue-500 hover:underline">Already have an expert account?</a>
           </p>
@@ -304,4 +255,4 @@ const ApplicationFirstPage = () => {
   );
 };
 
-export default ApplicationFirstPage;
+export default Form;

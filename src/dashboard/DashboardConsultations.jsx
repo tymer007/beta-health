@@ -18,8 +18,8 @@ const DashboardWriterProfile = () => {
           <DashboardItem icon={<LogOut size={20} />} text="Log Out" />
         </Dashboard>
         <div className="flex-1 p-8">
-          <h1 className="text-2xl font-bold">Welcome to your Consultations</h1>
-          <p>This is your dashboard content.</p>
+          <h1 className="text-2xl font-bold">Coming Soon...</h1>
+          <p>This feature is in the works.</p>
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Dashboard, { DashboardItem } from './Dashboard';
 import { User, Home, SquarePen, LogOut, Calendar, LifeBuoy, Settings } from "lucide-react";
+import WriterProfile from '../pages/WriterProfile';
 
 const DashboardWriterProfile = () => {
   return (
@@ -17,10 +18,9 @@ const DashboardWriterProfile = () => {
           <DashboardItem icon={<LifeBuoy size={20} />} text="Help" />
           <DashboardItem icon={<LogOut size={20} />} text="Log Out" />
         </Dashboard>
-        <div className="flex-1 p-8">
-          <h1 className="text-2xl font-bold">Welcome to the Writer Profile</h1>
-          <p>This is your dashboard content.</p>
-        </div>
+          <div >
+            <WriterProfile />
+          </div>
       </div>
     </>
   );
