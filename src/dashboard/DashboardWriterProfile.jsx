@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Dashboard, { DashboardItem } from './Dashboard';
 import { User, Home, SquarePen, LogOut, Calendar, LifeBuoy, Settings } from "lucide-react";
 import WriterProfile from '../pages/WriterProfile';

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -10,16 +11,16 @@ import Footer from './components/Footer';
 import './App.css'
 import AboutUs from './components/AboutUs.jsx';
 import WriterProfile from './pages/WriterProfile';
-import ApplicationFirstPage from './pages/ApplicationFirstPage';
-import ApplicationSecondPage from './pages/ApplicationSecondPage';
-import SignUp from './pages/SignUp.jsx';
+import ApplicationFirstPage from './pages/forms/ApplicationFirstPage';
+import ApplicationSecondPage from './pages/forms/ApplicationSecondPage';
+import SignUp from './pages/forms/SignUp.jsx';
 import DashboardWriterProfile from './dashboard/DashboardWriterProfile.jsx';
 import DashboardWriterConsultations from './dashboard/DashboardConsultations.jsx';
 import DashboardWriteArticle from './dashboard/DashboardWriteArticle.jsx';
 import CardCarousel from './components/CardCarousel.jsx';
-import Form from './pages/Form.jsx';
 import TopArticles from './components/TopArticles.jsx';
-import Login from './pages/Login.jsx';
+import Login from './pages/forms/Login.jsx';
+import LoginDashboard from './pages/forms/LoginDashboard.jsx';
 
 function App() {
 
@@ -27,24 +28,38 @@ function App() {
 
   return (
     <>
-<div><SignUp /></div>
 
-      {/*       
-<div><Login /></div>
-<div><Header /></div>
-<div><TopArticles /></div>
-<div><CardCarousel /></div>
-<div><AboutUs /></div>
-<div><Footer /></div>
-      <div><Form /></div>
-          <div><DashboardWriterProfile /></div>
-        <div><DashboardWriterConsultations /></div>
-        <div><DashboardWriteArticle /></div>
+      <div><Login /></div>
+      <div><SignUp /></div>
+
+      <div><Header /></div>
+      <div><AboutUs /></div>
+      <div><LoginDashboard /></div>
+      { /*
+        
+              <hr />
+      <hr />
+      <hr />
+      <div><TopArticles /></div>
+      <hr />
+      <div><CardCarousel /></div>
+      <hr />
+      <div><DashboardWriterProfile /></div>
+      <hr />
+      <div><Footer /></div>
+      <hr />
+      <hr />
+      <div><DashboardWriterConsultations /></div>
+      <hr />
+      <hr />
       <div><WriterProfile /></div>
-      <div><ApplicationFirstPage /></div>
-      <div><ApplicationSecondPage /></div>
     */}
+    <div><DashboardWriteArticle /></div>
+    <div><ApplicationFirstPage /></div> 
+    <div><ApplicationSecondPage /></div> 
 
+    {/* <hr />
+    */}
     </>
   )
 }

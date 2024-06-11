@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 const WriterProfile = () => {

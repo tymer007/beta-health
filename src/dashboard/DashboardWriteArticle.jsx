@@ -1,5 +1,6 @@
 // DashboardWriterProfile.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Dashboard, { DashboardItem } from './Dashboard';
 import { User, Home, SquarePen, LogOut, Calendar, LifeBuoy, Settings } from "lucide-react";
 import Loader from '../components/Loader';
@@ -23,7 +24,8 @@ const DashboardWriterProfile = () => {
           <h1 className="text-2xl font-bold">Write an Article!</h1>
           <p>This is your dashboard content.</p>
 
-          <div>
+          <div className='pt-5'>
+            {/* <Loader /> */}
             <Loader />
           </div>
         </div>

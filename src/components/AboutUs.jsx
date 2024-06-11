@@ -1,4 +1,5 @@
 import React from 'react';// Ensure you have a logo image in your src directory
+import { Link } from 'react-router-dom';
 
 const FeatureCard = ({ image, title, description }) => (
   <div className="bg-white rounded-lg shadow-lg overflow-hidden w-72 mx-auto cursor-pointer">
